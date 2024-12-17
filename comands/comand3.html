@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="comanda1/style.css/style.css">
+    <title>KmeptXvarwin</title>
+    <link rel="shortcut icon"
+        href="https://eios.kmept.ru/pluginfile.php/1/theme_opentechnology/settings_1016_main_favicon/1726063174/K.ico" />
+
+</head>
+<script>
+    (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' ||
+            (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-mode-variables');
+        }
+    })();
+</script>
+<style>
+    .infotxt {
+        margin-top: 90px;
+        line-height: 1;
+        font-family: "Baloo Tamma 2", cursive;
+        color: var(--color-info-dark);
+    }
+
+    .card {
+        margin-top: 53px;
+        max-width: 300px;
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 500px;
+        height: 300px;
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        color: var(--color-info-dark);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(15px);
+    }
+
+    .card-footer {
+        font-size: 0.65em;
+        color: var(--color-info-dark);
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            border: 0;
+        }
+
+        table thead {
+            display: none;
+        }
+
+        table tr {
+            margin-bottom: 10px;
+            display: block;
+            border-bottom: 2px solid #7d8da1;
+        }
+
+        table td {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+            border-bottom: 1px dotted #7d8da1;
+            border-right: 1px solid transparent;
+        }
+
+        table td:last-child {
+            border-bottom: 0;
+        }
+
+        table td:before {
+            content: attr(data-label);
+            float: left;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="comanda1/images/logo.png.jpg">
+                    <h2>KMEPT<span class="primary">X</span>Varwin</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../index.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Главная</h3>
+                </a>
+                <a href="../comands.html">
+                    <span class="material-icons-sharp">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7d8da1">
+                            <path
+                                d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                        </svg>
+                    </span>
+                    <h3>Команды</h3>
+                </a>
+                <a href="comand3.html" class="active">
+                    <span class="material-icons-sharp">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7d8da1">
+                            <path
+                                d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                        </svg>
+                    </span>
+                    <h3>Команда 1</h3>
+                </a>
+                <a href="comand1-20/zadanie3.html">
+                    <span class="material-icons-sharp">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7d8da1">
+                            <path
+                                d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                        </svg>
+                    </span>
+                    <h3>Задача команды</h3>
+                </a>
+                <a href="texwork.html">
+                    <span class="material-icons-sharp">
+                        tasks
+                    </span>
+                    <h3>Технические задания</h3>
+                </a>
+                <a href="../index.php">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main class="infotxt">
+            <div class="card">
+                <tr>
+                    <td>
+                        <h1>Участники команды</h1>
+                        <p>___________________________________________</p>
+                        <p class="title">
+                        <h1>о-П 923/1</h1>
+                        <h2>Кириллов Иван
+                        </h2>
+                        <h2>Алексей Обушко
+                        </h2>
+                        <h2>Даниил Морозов
+                        </h2>
+                        <h2>Максим Гавриков
+                        </h2>
+                        <h1>
+                            Руководитель: Рядинская Л.В.
+                        </h1>
+                        </p>
+                        <p>___________________________________________</p>
+                        <p class="title">
+                        <h1>о-К923/2</h1>
+                        <h2>Илья Сницаренко
+                        </h2>
+                        <h2>Дворак София
+                        </h2>
+                        <h2>Кочарова Виктория
+                        </h2>
+                        <h1>
+                            Руководитель: Гусейнова Э.И.
+                        </h1>
+                        </p>
+                        <p>___________________________________________</p>
+                        <p class="title">о-Ю 923/2
+                        <h1>Шишов Руслан
+                        </h1>
+                        <h1>Дякина Екатерина
+                        </h1>
+                        <h1>
+                            Руководитель: Троцюк Н.В.
+                        </h1>
+                        </p>
+                        <p>___________________________________________</p>
+                    </td>
+                </tr>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <small class="text-muted">Участник</small>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <h2>Студент</h2>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Время до начала защиты</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+                <div class="notification">
+                    <div class="material-icons-sharp">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#7d8da1">
+                            <path
+                                d="M360-840v-80h240v80H360Zm80 440h80v-240h-80v240Zm40 320q-74 0-139.5-28.5T226-186q-49-49-77.5-114.5T120-440q0-74 28.5-139.5T226-694q49-49 114.5-77.5T480-800q62 0 119 20t107 58l56-56 56 56-56 56q38 50 58 107t20 119q0 74-28.5 139.5T734-186q-49 49-114.5 77.5T480-80Zm0-80q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-280Z" />
+                        </svg>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <small class="text_muted">
+                                <div id="countdown" class="countdown">
+                                    <div id="countdown" class="countdown">
+                                        <div class="countdown-number">
+                                            <span class="days countdown-time"></span>
+                                            <span class="countdown-text">Days</span>
+                                        </div>
+                                        <div class="countdown-number">
+                                            <span class="hours countdown-time"></span>
+                                            <span class="countdown-text">Hours</span>
+                                        </div>
+                                        <div class="countdown-number">
+                                            <span class="minutes countdown-time"></span>
+                                            <span class="countdown-text">Minutes</span>
+                                        </div>
+                                        <div class="countdown-number">
+                                            <span class="seconds countdown-time"></span>
+                                            <span class="countdown-text">Seconds</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            <time datetime=""></time>
+                        </span>
+                    </div>
+                </div>
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            <img class="jpng" src="images/kmept.jpng.webp" alt="">
+                        </span>
+                        <a href="https://kmept.ru/">
+                            ОФИЦИАЛЬНЫЙ САЙТ
+                        </a>
+                    </div>
+                    <div>
+                        <span class="material-icons-sharp">
+                            <img class="jpng" src="images/kmeptioc.jpng.ico" alt="">
+                        </span>
+                        <a href="https://eios.kmept.ru/">
+                            ЭИОС КМЭПТ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="comanda1/javascript/index.js"></script>
+    <script src="comanda1/javascript/index.js"></script>
+    <script src="comanda1/javascript/timer.js"></script>
+</body>
+
+</html>
