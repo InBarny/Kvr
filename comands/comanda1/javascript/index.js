@@ -1,3 +1,21 @@
+// Menu toggle functionality
+const sideMenu = document.querySelector("aside");
+const menuBtn = document.getElementById("menu-btn");
+
+menuBtn.addEventListener("click", () => {
+  // Toggle the menu visibility
+  if (sideMenu.style.display === "block") {
+    sideMenu.style.display = "none";
+  } else {
+    sideMenu.style.display = "block";
+  }
+});
+
+menuBtn.addEventListener("click", () => {
+  // Toggle the show class for animation
+  sideMenu.classList.toggle("show");
+});
+
 // Theme Management
 class ThemeManager {
   constructor() {

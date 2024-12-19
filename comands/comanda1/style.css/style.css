@@ -142,8 +142,10 @@ body {
 
 /* kmeptvarwinpng */
 .img-scr {
-  margin-top: -15%;
-  max-width: absolute;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
@@ -294,15 +296,29 @@ aside .toggle .close {
 }
 
 aside .sidebar {
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   border-radius: 15px;
   height: 88vh;
-  position: relative;
   top: 1.5rem;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 100;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  aside {
+    position: fixed;
+    width: 15rem; /* Adjust width as needed */
+  }
+}
+
+aside.show {
+  transform: translateX(0);
 }
 
 aside .sidebar:hover {
@@ -364,6 +380,14 @@ aside .sidebar .message-count {
   color: var(--color-white);
   font-size: 11px;
   border-radius: var(--border-radius-1);
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  aside {
+    position: fixed;
+    width: 15rem; /* Adjust width as needed */
+  }
 }
 
 main {
